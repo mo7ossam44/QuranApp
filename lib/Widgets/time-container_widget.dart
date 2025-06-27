@@ -1,10 +1,7 @@
-
 import 'package:flutter/material.dart';
 
 class TimeContainerWidget extends StatelessWidget {
-  const TimeContainerWidget({
-    super.key,
-  });
+  const TimeContainerWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,17 +20,25 @@ class TimeContainerWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Duher', style: TextStyle(fontSize: 17)),
+                Text(
+                  'Duher',
+                  style: TextStyle(fontSize: 17, fontFamily: 'Antic'),
+                ),
                 Text(
                   '10.45 Am',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 30,
+                    fontSize: 40,
+                    fontFamily: 'Antic',
                   ),
                 ),
                 Text(
                   '2 hours left unti duher',
-                  style: TextStyle(fontSize: 17),
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontFamily: 'Antic',
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ],
             ),
