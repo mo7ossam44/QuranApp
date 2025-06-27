@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quran_app/screens/first_page.dart';
 import 'package:quran_app/screens/home_page.dart';
-import 'package:quran_app/services/quran_service.dart';
 
 void main() {
-  QuranService().getSurah();
   runApp(const MyApp());
 }
 
