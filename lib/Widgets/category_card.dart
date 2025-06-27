@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quran_app/models/category_model.dart';
 
-
 class CategoryCard extends StatelessWidget {
   CategoryCard({super.key, required this.categoryModel});
 
@@ -26,6 +25,7 @@ class CategoryCard extends StatelessWidget {
               categoryModel.name,
               style: TextStyle(
                 color: Colors.black,
+                fontFamily: 'Antic',
                 fontWeight: FontWeight.bold,
               ),
             ),
