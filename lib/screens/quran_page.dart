@@ -15,6 +15,7 @@ class _QuranPageState extends State<QuranPage> {
 
   bool isSerachOpend = false;
   bool isLoaded = true;
+  SearchController searchController = SearchController();
 
   @override
   void initState() {
@@ -35,7 +36,16 @@ class _QuranPageState extends State<QuranPage> {
       backgroundColor: Colors.grey.shade100,
       appBar: AppBar(
         title: isSerachOpend
-            ? TextField(decoration: InputDecoration(hintText: 'Search'))
+            ? TextField(
+                decoration: InputDecoration(
+                  labelText: 'Search',
+                  labelStyle: TextStyle(color: Colors.green),
+                  border: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.green),
+                  ),
+                ),
+                cursorColor: Colors.green,
+              )
             : Text(
                 'Quran',
                 style: TextStyle(
@@ -48,19 +58,27 @@ class _QuranPageState extends State<QuranPage> {
         backgroundColor: Colors.grey.shade100,
         elevation: 0,
         actions: [
-          IconButton(
-            onPressed: () {
-              isSerachOpend = true;
-              setState(() {});
-            },
-            icon: Icon(Icons.search_rounded, size: 27),
-          ),
+          isSerachOpend
+              ? IconButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                    setState(() {});
+                  },
+                  icon: Icon(Icons.clear, size: 27),
+                )
+              : IconButton(
+                  onPressed: () {
+                    isSerachOpend = true;
+                    setState(() {});
+                  },
+                  icon: Icon(Icons.search_rounded, size: 27),
+                ),
         ],
       ),
       body: isLoaded
           ? Center(child: CircularProgressIndicator(color: Colors.green))
           : Padding(
-              padding: const EdgeInsets.only(top: 20),
+              padding: const EdgeInsets.only(top: 20, bottom: 20),
               child: ListView.builder(
                 itemCount: surah.length,
                 itemBuilder: (context, index) {
