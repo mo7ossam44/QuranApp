@@ -15,47 +15,47 @@ class HomePage extends StatelessWidget {
     CategoryModel(
       targetPage: QuranPage(),
       image: 'assets/images/quran.png',
-      name: 'Al-Quran',
+      name: 'القرأن',
     ),
     CategoryModel(
-      targetPage: QiblaPage(),
-      image: 'assets/images/qibla.png',
-      name: 'Qibla',
+      targetPage: TasbehPage(),
+      image: 'assets/images/praying.png',
+      name: 'الأذكار',
     ),
     CategoryModel(
       targetPage: PrayerTimePage(),
       image: 'assets/images/time.png',
-      name: 'Prayer Time',
+      name: 'ميعاد الصلاة',
     ),
     CategoryModel(
-      targetPage: TasbehPage(),
-      image: 'assets/images/tasbih.png',
-      name: 'Tasbih',
+      targetPage: QiblaPage(),
+      image: 'assets/images/qibla.png',
+      name: 'القبلة',
+    ),
+    CategoryModel(
+      targetPage: QuranPage(),
+      image: 'assets/images/halal.png',
+      name: 'الطعام الحلال',
     ),
     CategoryModel(
       targetPage: QuranPage(),
       image: 'assets/images/calendar.png',
-      name: 'Higri Calender',
-    ),
-    CategoryModel(
-      targetPage: QuranPage(),
-      image: 'assets/images/halal.png',
-      name: 'Halal Food',
+      name: 'التاريخ الهجري',
     ),
     CategoryModel(
       targetPage: QuranPage(),
       image: 'assets/images/infaq.png',
-      name: 'Infaq',
+      name: 'إنفاق',
     ),
     CategoryModel(
       targetPage: QuranPage(),
       image: 'assets/images/halal.png',
-      name: 'Halal Food',
+      name: 'الطعام الحلال',
     ),
     CategoryModel(
       targetPage: QuranPage(),
       image: 'assets/images/infaq.png',
-      name: 'Infaq',
+      name: 'إنفاق',
     ),
   ];
 
