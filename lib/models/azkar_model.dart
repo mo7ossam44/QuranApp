@@ -41,11 +41,11 @@ class AzkarModel {
 
   factory AzkarModel.fromJson(Map<String, dynamic> json) {
     return AzkarModel(
-      id: json['id'],
-      text: json['text'],
-      count: json['count'],
-      audio: json['audio'],
-      filename: json['filename'],
+      id: json['id'] ?? 0,
+      text: json['text'] ?? '',
+      count: json['count'] ?? 0,
+      audio: json['audio'] ?? '',
+      filename: json['filename'] ?? '',
     );
   }
 }
