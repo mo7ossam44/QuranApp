@@ -51,6 +51,7 @@ class _QuranPageState extends State<QuranPage> {
                 style: TextStyle(
                   color: Colors.green,
                   fontWeight: FontWeight.bold,
+                  fontFamily: 'expo',
                 ),
               ),
         iconTheme: IconThemeData(color: Colors.green, size: 27),
