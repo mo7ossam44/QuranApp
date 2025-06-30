@@ -17,6 +17,10 @@ class CategoryCard extends StatelessWidget {
       child: Container(
         width: 100,
         height: 100,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(20),
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -25,15 +29,11 @@ class CategoryCard extends StatelessWidget {
               categoryModel.name,
               style: TextStyle(
                 color: Colors.black,
-                fontFamily: 'Antic',
-                fontWeight: FontWeight.bold,
+                fontFamily: 'expo',
+                fontSize: 14,
               ),
             ),
           ],
-        ),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(20),
         ),
       ),
     );
