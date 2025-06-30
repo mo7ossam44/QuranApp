@@ -14,11 +14,12 @@ class AzkarCard extends StatelessWidget {
       onTap: () {
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => AzkarPage(categoryName: azkarModel.category),
+            builder: (context) => AzkarPage(zekerCategoryModel: azkarModel),
           ),
         );
       },
       child: Card(
+        color: Colors.green,
         margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: ListTile(
           contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
@@ -26,12 +27,12 @@ class AzkarCard extends StatelessWidget {
             azkarModel.category,
             style: TextStyle(
               fontFamily: 'expo',
-              fontSize: 18,
+              fontSize: 16,
               fontWeight: FontWeight.bold,
-              color: Colors.green,
+              color: Colors.white,
             ),
           ),
-          leading: Icon(Icons.arrow_back_ios, color: Colors.green),
+          leading: Icon(Icons.arrow_back_ios, color: Colors.white),
         ),
       ),
     );
