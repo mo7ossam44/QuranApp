@@ -36,8 +36,8 @@ class _TimeContainerWidgetState extends State<TimeContainerWidget> {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            Color.fromARGB(255, 183, 255, 214), // أخضر فاتح جدًا
-            Color(0xFFDFF1E8), // أخضر أغمق حاجة بسيطة
+            Color.fromARGB(255, 169, 234, 140), // أخضر فاتح جدًا
+            Color.fromARGB(255, 185, 249, 201), // أخضر أغمق حاجة بسيطة
           ],
         ),
         borderRadius: BorderRadius.circular(20),
