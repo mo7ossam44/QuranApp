@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
     CategoryModel(
       targetPage: TasbehPage(),
       image: 'assets/images/tasbih.png',
-      name: 'tasbih',
+      name: 'Tasbih',
     ),
     CategoryModel(
       targetPage: QuranPage(),
