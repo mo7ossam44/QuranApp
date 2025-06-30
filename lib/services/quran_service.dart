@@ -1,10 +1,9 @@
-import 'dart:convert';
-
 import 'package:dio/dio.dart';
 import 'package:quran_app/models/ayat_model.dart';
 import 'package:quran_app/models/surah_model.dart';
 
 class QuranService {
+
   final dio = Dio();
 
   Future<List<SurahModel>> getSurah() async {
