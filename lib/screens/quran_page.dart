@@ -37,6 +37,7 @@ class _QuranPageState extends State<QuranPage> {
       appBar: AppBar(
         title: isSerachOpend
             ? TextField(
+                onSubmitted: (value) {},
                 decoration: InputDecoration(
                   labelText: 'Search',
                   labelStyle: TextStyle(color: Colors.green),
@@ -47,7 +48,7 @@ class _QuranPageState extends State<QuranPage> {
                 cursorColor: Colors.green,
               )
             : Text(
-                'Quran',
+                'القرأن',
                 style: TextStyle(
                   color: Colors.green,
                   fontWeight: FontWeight.bold,
