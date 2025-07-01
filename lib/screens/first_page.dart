@@ -8,7 +8,7 @@ class FirstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.green,
       body: Padding(
         padding: const EdgeInsets.only(left: 20, top: 30),
         child: Column(
@@ -18,10 +18,10 @@ class FirstPage extends StatelessWidget {
             SizedBox(height: 20),
             //? Text -> Quran
             Text(
-              'Quran',
+              'Zeker',
               style: TextStyle(
                 fontSize: 20,
-                color: Colors.green,
+                color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -33,7 +33,7 @@ class FirstPage extends StatelessWidget {
               style: TextStyle(
                 fontSize: 60,
                 height: 1.3,
-                color: Colors.green,
+                color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
             ),
