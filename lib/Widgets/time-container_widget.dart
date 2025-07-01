@@ -11,6 +11,9 @@ class TimeContainerWidget extends StatefulWidget {
 
 class _TimeContainerWidgetState extends State<TimeContainerWidget> {
   String _timeString = '';
+  String? nextPrayerName;
+  DateTime? nextPrayerTime;
+  Duration? timeLeft;
 
   @override
   void initState() {
@@ -22,6 +25,7 @@ class _TimeContainerWidgetState extends State<TimeContainerWidget> {
   void _updateTime() {
     final now = DateTime.now();
     final formattedTime = DateFormat('h:mm a').format(now);
+    if (!mounted) return; // ← تأكد إن الصفحة لسه في الشجرة
     setState(() {
       _timeString = formattedTime;
     });
@@ -32,14 +36,7 @@ class _TimeContainerWidgetState extends State<TimeContainerWidget> {
     return Container(
       height: 160,
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [
-            Color.fromARGB(255, 169, 234, 140), // أخضر فاتح جدًا
-            Color.fromARGB(255, 185, 249, 201), // أخضر أغمق حاجة بسيطة
-          ],
-        ),
+        color: Colors.green,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Padding(
@@ -53,7 +50,11 @@ class _TimeContainerWidgetState extends State<TimeContainerWidget> {
               children: [
                 Text(
                   'Duher',
-                  style: TextStyle(fontSize: 17, fontFamily: 'Antic'),
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontFamily: 'Antic',
+                    color: Colors.white,
+                  ),
                 ),
                 Text(
                   _timeString,
@@ -61,6 +62,7 @@ class _TimeContainerWidgetState extends State<TimeContainerWidget> {
                     fontWeight: FontWeight.normal,
                     fontSize: 40,
                     fontFamily: 'expo',
+                    color: Colors.white,
                   ),
                 ),
                 Text(
@@ -69,6 +71,8 @@ class _TimeContainerWidgetState extends State<TimeContainerWidget> {
                     fontSize: 17,
                     fontFamily: 'Antic',
                     fontWeight: FontWeight.bold,
+
+                    color: Colors.white,
                   ),
                 ),
               ],
