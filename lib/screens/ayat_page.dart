@@ -44,8 +44,12 @@ class _AyatPageState extends State<AyatPage> {
         centerTitle: true,
         iconTheme: IconThemeData(color: Colors.green, size: 27),
         title: Text(
-          widget.surahModel.englishName,
-          style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold),
+          widget.surahModel.name,
+          style: TextStyle(
+            color: Colors.green,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'KFGQPC',
+          ),
         ),
       ),
       body: isLoaded
