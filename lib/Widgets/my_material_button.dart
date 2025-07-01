@@ -13,14 +13,14 @@ class MyMaterialButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      onPressed: () {},
-      child: Text(textButton),
-      color: Colors.green.shade800,
-      textColor: Colors.white,
+      onPressed: ontap,
+      color: Colors.white,
+      textColor: Colors.green,
       height: 40,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadiusGeometry.circular(15),
       ),
+      child: Text(textButton),
     );
   }
 }
